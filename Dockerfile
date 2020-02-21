@@ -21,5 +21,5 @@ WORKDIR /
 RUN rm -rf /foo
 WORKDIR /foo
 COPY . /foo
+RUN find -name '*.rs' | xargs touch
 RUN cargo build --target-dir=/target
-
